@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        } else {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+        }
+    </script>
+    <meta name="author" content="Anna Getachewová" />
+    <meta name="description" content="Portfolio Anny Getachewové." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126261" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./svg/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/504968f35f.js" crossorigin="anonymous"></script>
+
+    <title>Portfolio AG</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="../../index.html#oMne">O&nbsp;mně</a></li>
+                    <li><a href="../../index.html#projekty-sekce">Projekty</a></li>
+                    <li><a href="../../index.html#kontakt">Kontakt</a></li>
+                    <li class="mobile-theme-toggle-item">
+                        <div class="dark-mode-toggle-mobile" id="dark-mode-toggle-mobile">
+                            <div class="sun" id="sun-mobile"></div>
+                            <div class="moon" id="moon-mobile"></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="index.html">
+                <img src="./svg/logo-light.svg" alt="Portfolio Anna Getachewová" class="logo" />
+            </a>
+
+
+            <div class="dark-mode-toggle" id="dark-mode-toggle">
+                <div class="sun" id="sun"></div>
+                <div class="moon" id="moon"></div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+        <div class="oMne" id="oMne">
+            <h1>O mně</h1>
+            <div class="content">
+                <p>Jmenuji se Anna Getachewová, studuji informatiku a&nbsp;jsem samouk grafického designu. Ráda
+                    kombinuji technické dovednosti s&nbsp;kreativním přístupem. Věnuji se&nbsp;hlavně grafickému
+                    a&nbsp;webovému designu,
+                    ale mám zkušenosti i&nbsp;s&nbsp;programováním v&nbsp;jazyce Java, správou počítačových sítí
+                    a&nbsp;úpravou videí. Zní to jako od každého něco, ale právě proto mám na věci často svůj unikátní
+                    pohled.
+                </p>
+
+                <p>
+                    V&nbsp;tomto portfoliu najdete ukázky mé osobní práce a&nbsp;reálných projektů.</p>
+                <a class="saveCV" href="docs/Anna_Getachewova_CV.pdf" download>Stáhnout CV</a>
+            </div>
+        </div>
+        <div class="divider1"></div>
+        <div class="projekty-sekce" id="projekty-sekce">
+            <h1 id="projekty">Projekty</h1>
+            <div class="filter">
+                <div class="container active" data-filter="all"><button class="filter-btn">Všechny</button></div> |
+                <div class="container" data-filter="design"><button class="filter-btn">Grafický design</button></div>
+                <div class="container" data-filter="web"><button class="filter-btn">Web</button></div>
+            </div>
+
+            <div class="projektContainer">
+                <div class="prev projekt-prev"></div>
+                <div class="projekty">
+
+                </div>
+                <div class="next projekt-next"></div>
+            </div>
+
+            <div id="page" class="page"></div>
+
+
+        </div>
+        <div class="divider2"></div>
+        <div class="kontakt-sekce" id="kontakt">
+            <h1>Kontakt</h1>
+            <div class="content">
+                <p>Máte zájem o spolupráci nebo chcete vědět více? Kontaktujte mě!</p>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> <a
+                            href="mailto:annagetachewova@gmail.com">annagetachewova@gmail.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i>+420&nbsp;733&nbsp;479&nbsp;706</li>
+                    <li><i class="fa-brands fa-github"></i> <a href="https://github.com/getann884"
+                            target="_blank">getann884</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Anna Getachewová.</p>
+    </footer>
+
+</body>
+<script src="./javascript.js"></script>
+
+</html>
